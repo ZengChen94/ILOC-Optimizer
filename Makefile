@@ -11,6 +11,12 @@ opt:	opt.o machine.o instruction.o hash.o lex.yy.o iloc.tab.o
 opt.o:	opt.cc instruction.h
 		$(CP) -O2 -c opt.cc --std=c++11
 
+# sim:	sim.o machine.o instruction.o hash.o lex.yy.o iloc.tab.o
+# 		$(CC) -O2 -o sim sim.o machine.o instruction.o hash.o lex.yy.o iloc.tab.o
+
+# sim.o:	sim.c instruction.h machine.h sim.h
+# 		$(CC) -O2 -c sim.c
+
 machine.o:	machine.c machine.h
 			$(CC) -O2 -c machine.c
 

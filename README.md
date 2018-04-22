@@ -1,8 +1,10 @@
 
 ## Compile:
+The file of opt and Sim should all be compiled. Under their directories, use the following command independently.
 
-* `make`:			complie all files into executable file. 
 * `make clean`:	clean all compiled files
+* `make` or `make all`:			complie all files into executable file.
+
 
 ## Usage:
 * `./opt -v ./TestCodes/algred/algred.i`: 		optimize with Local Value Numbering
@@ -10,7 +12,7 @@
 * `./opt -v -u ./TestCodes/algred/algred.i`: 			optimize with Local Value Numbering and Loop Unrolling
 * `./opt -u -v ./TestCodes/algred/algred.i`: 			optimize with Loop Unrolling and Local Value Numbering
 *  All the output will be written in output.i
-*  `./sim ./output.i`: 		test with Sim, an ILOC simulator to measure
+*  `./Sim/src/sim ./output.i`: 		test with Sim, an ILOC simulator to measure
 the number of cycles
 
 ## Test:

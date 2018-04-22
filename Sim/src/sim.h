@@ -98,6 +98,4 @@ Change* execute_changes(Change*,Change**,Instruction**);
 /* Returns false if machine constraints are violated. */
 int check_machine_constraints(Instruction*);
 
-void print_code(Instruction* code);
-
 #endif /* _SIM_H_ */

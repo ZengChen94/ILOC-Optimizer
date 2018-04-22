@@ -10,7 +10,7 @@ L0:	nop
 L2:	nop 
 	loadI 1=>r2
 	cmp_LE r2,r3=>r7
-	cbr r7->L4,L5
+	cbr r7->L6,L5
 L4:	nop 
 	mult r3,r3=>r8
 	mult r8,r3=>r9
@@ -34,3 +34,42 @@ L3:	nop
 L1:	nop 
 	write r4
 	halt 
+L6:	nop 
+	addI r2,4=>r18
+	cmp_LE r18,r3=>r19
+	cbr r19->L7,L4
+L7:	nop 
+	mult r3,r3=>r8
+	mult r8,r3=>r9
+	mult r0,r9=>r10
+	mult r3,r3=>r11
+	mult r1,r11=>r12
+	add r10,r12=>r13
+	add r13,r2=>r14
+	i2i r14=>r4
+	mult r3,r3=>r8
+	mult r8,r3=>r9
+	mult r0,r9=>r10
+	mult r3,r3=>r11
+	mult r1,r11=>r12
+	add r10,r12=>r13
+	add r13,r2=>r14
+	i2i r14=>r4
+	mult r3,r3=>r8
+	mult r8,r3=>r9
+	mult r0,r9=>r10
+	mult r3,r3=>r11
+	mult r1,r11=>r12
+	add r10,r12=>r13
+	add r13,r2=>r14
+	i2i r14=>r4
+	mult r3,r3=>r8
+	mult r8,r3=>r9
+	mult r0,r9=>r10
+	mult r3,r3=>r11
+	mult r1,r11=>r12
+	add r10,r12=>r13
+	add r13,r2=>r14
+	i2i r14=>r4
+	addI r2,4=>r2
+	br ->L6

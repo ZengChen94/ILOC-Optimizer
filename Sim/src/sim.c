@@ -327,17 +327,9 @@ int main(int argc, char* argv[]) {
     stdin = savedstdin;
 
   simulate(code);
-  // print_code(code);
 
   return 0;
 };
-
-void print_code(Instruction* code) {
-	while (code) {
-		// fprintf("%d\n", code->operations->srcs->value);
-		code = code->next;
-	}
-}
 
 /* Print a usage message */
 void print_help()
